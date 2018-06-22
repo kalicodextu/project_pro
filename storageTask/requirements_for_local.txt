@@ -1,0 +1,4 @@
+# pip install --extra-index-url http://rd.dayangdata.com:12080/ PACKAGE [PACKAGE2...]
+
+xybase == 1.13.28
+xylogger == 0.2.3

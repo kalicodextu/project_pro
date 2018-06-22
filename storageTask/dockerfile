@@ -1,0 +1,7 @@
+FROM dy-python:latest
+RUN mkdir /run/connectionsStorage
+WORKDIR /run/connectionsStorage
+COPY . .
+RUN pip install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host pypi.douban.com  
+RUN pip install -r requirements_for_local.txt  --extra-index-url http://rd.dacdy.xyz:12080 --trusted-host rd.dacdy.xyz
+CMD ["python", "storageTask.py", "storageTask.conf"]
